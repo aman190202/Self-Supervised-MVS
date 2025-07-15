@@ -1,14 +1,14 @@
 #!/bin/bash
-MVS_TRAINING="/home/xhb/datasets/mvsnet_data/training_data/dtu_training"
+MVS_TRAINING="/home/works/Self-Supervised-MVS/dtu"
 python train.py \
-	--gpu_device "0,1,2,3" \
+	--gpu_device "0" \
         --dataset "dtu_yao" \
-        --batch_size 4 \
+        --batch_size 2 \
         --trainpath $MVS_TRAINING \
         --trainlist "lists/dtu/train.txt" \
         --testlist "lists/dtu/test.txt" \
         --numdepth 192 \
-        --logdir "./log-2021-04-09" \
+        --logdir "./log-first-run-7-14-25" \
         --refine False \
         --lr 0.001 \
         --epochs 10 \
